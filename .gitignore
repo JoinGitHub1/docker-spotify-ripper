@@ -1,4 +1,0 @@
-/Dockerfile.amd64
-/Dockerfile.arm32v7
-/manifest-tool
-/multi-arch-manifest-*.yaml
