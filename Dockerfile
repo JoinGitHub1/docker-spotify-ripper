@@ -13,6 +13,7 @@ RUN apt-get -qq update && \
     curl -sL https://api.github.com/repos/putty182/spotify-ripper/tarball | tar xz -C /usr/src/spotify-ripper --strip-components=1 && \
     pip install --upgrade pip && \
     cd /usr/src/spotify-ripper && pip install --upgrade . && \
+    apt-mark manual python-setuptools && \
     apt-get -qq --purge autoremove -y libffi-dev python-pip python-dev libspotify-dev curl wget apt-transport-https gnupg && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /etc/apt/sources.list.d/mopidy.list && \
